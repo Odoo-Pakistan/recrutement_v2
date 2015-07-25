@@ -1,0 +1,34 @@
+<openerp>
+    <data>
+        <!-- Form-->
+        <record id="hr_candidat_form" model="ir.ui.view">
+            <field name="name">Candidat</field>
+            <field name="model">hr.candidat</field>
+            <field name="arch" type="xml">
+                <form string="Candidat">
+                    <sheet>
+                        <group>
+                            <field name="situation" />
+                            <field name="fonction" />
+                            <field name="mobilite" />
+                            <field name="date_disp" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action-->
+        <record id="hr_candidat_action" model="ir.acctions.act_window">
+            <field name="name" >Candidat</field>
+            <field name="res_model">hr.candidat</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <!-- Menus -->
+        <menuitem name="Candidats" id="hr_candidat_main_menu" />
+        <menuitem name="Candidatures" id="hr_candidat_menu" parent="hr_candidat_main_menu" />
+        <menuitem name="Afficher les candidats" id="hr_candidat_info" parent="hr_candidat_main_menu" />
+
+    </data>
+</openerp>

@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+        <!---
+        <!-- Formulaire -->
+        <record id="view_candidat_form" model="ir.ui.view">
+            <field name="name"> candida Form</field>
+            <field name="model">candidat.candidat</field>
+            <field name="arch" type="xml" >
+                <tree string="Candidat">
+                    <field name="situation" />
+                    <field name="fonction" />
+                    <field name="mobilite" />
+                    <field name="date_disp" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Tree -->
+        <record id="view_candidat_tree" model="ir.ui.view">
+            <field name="name">candidat tree</field>
+            <field name="model">candidat.candidat</field>
+            <field name="arch" type="xml">
+                <form string="Candidat">
+                    <sheet>
+                        <group>
+                            <field name="situation"/>
+                            <field name="fonction" />
+                            <field name="mobilite" />
+                            <field name="date_dip" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="candidat_candidat_action" model="ir.actions.act_window">
+            <field name="name" > Candidat</field>
+            <field name="res_model">candidat.candidat</field>
+            <field name="view_mode">tree, form</field>
+        </record>
+        -->
+        <!--Menus-->
+        <menuitem id="recrutement_main_menu" name="Recrutement"   />
+        <menuitem name="Candidat" id="recrutement_menu"  parent="recrutement_main_menu" />
+        <menuitem name="Candidat Info" id="candidat_info"  parent="recrutement_main_menu" action="candidat_candidat_action" />
+
+    </data>
+</openerp>
