@@ -8,3 +8,4 @@
                 ./i18n/fr.po
                 ./i18n/en_AU.po
                 ./i18n/en_GB.po
+ajouter boutton d'ajout de CV
